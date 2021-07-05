@@ -56,7 +56,7 @@ def cleaning_documents(articles):
       news = articles.replace('\n',' ')
       news = re.sub('[^\u0980-\u09FF]',' ',str(news))
  
-      stp = open('/content/drive/MyDrive/bangla_stopwords.pkl','r', encoding= 'unicode_escape').read().split()
+      stp = open('bangla_stopwords.pkl','r', encoding= 'unicode_escape').read().split()
       result = news.split()
       news = [word.strip() for word in result if word not in stp ]
       news =" ".join(news)
